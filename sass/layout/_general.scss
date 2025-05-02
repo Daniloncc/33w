@@ -1,20 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 body {
-    font-family: 'Poppins',  sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .global {
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 900px;
-    margin: 0 auto;
-
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
 }

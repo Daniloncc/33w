@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
+    <!-- link google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Allura&family=Amatic+SC:wght@400;700&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Belleza&family=Cinzel:wght@400..900&family=Kings&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Giga:wght@100..900&family=Lexend+Mega:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <title>Page Accueil</title>
 </head>
 <body>
     <header class="entete">
-        <div class="global">
-            <h1></h1>
+        <div class="entete__contenu global">
+            <img class="entete__logo" src="images/logo.png" alt="">
+            <nav class="entete__nav">
+                <ul class="entete__menu">
+                    <li class="entete__menu-item">Aventure</li>
+                    <li class="entete__menu-item">Relaxer</li>
+                    <li class="entete__menu-item">Culturel</li>
+                    <li class="entete__menu-item">Zen</li>
+                    <li class="entete__menu-item">Nature</li>
+                    <li class="entete__menu-item">Sport</li>
+                    <li class="entete__menu-item">Croisiere</li>
+                </ul>
+                <form action="" class="recherche">
+                    <label for="recherche"></label>
+                    <input class="recherche__input" type="search" name="recherche" id="recherche">
+                    <button class="recherche__bouton"><img src="https://s2.svgbox.net/materialui.svg?ic=search&color=000" width="26" height="26"></button>
+                </form>
+            </nav>
         </div>
     </header>
     

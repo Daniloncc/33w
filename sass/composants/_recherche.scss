@@ -1,0 +1,13 @@
+.recherche {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    &__input {
+        border: none;
+        outline: none;
+    }
+
+    &__bouton{
+        border-left:1px solid green($color: #000000) ;
+    }
+}
