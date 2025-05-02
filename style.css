@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/*
+Theme Name: theme-33w
+Theme URI: https://referenced.ca
+Author: Danilo Nunes Costa e Costa
+Author URI: https://github.com/Daniloncc/33w
+Description: Thème de base développer dans le cadre du cours de Worpress
+Version: 1.0
+Tested up to: 6.2
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: club-voyage
+*/
+h1 {
+  font-family: "roboto", "sans-serif";
+  font-size: clamp(1.5rem, 5.4795vw - 0.137rem, 5rem);
+}
+
+h2 {
+  font-family: "roboto", "sans-serif";
+  font-size: clamp(1rem, 3.1311vw + 0.0646rem, 3rem);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.global {
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.entete {
+  display: flex;
+  color: black;
+}
+.entete__contenu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.entete__logo {
+  width: 75px;
+  height: 75px;
+}
+.entete__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.entete__menu {
+  margin-right: 20px;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+.entete__menu-item a {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  background-image: linear-gradient(to right, rgb(251, 98, 42) 0%, rgb(251, 98, 42) 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 0.1em;
+  background-position: 0 100%;
+  transition: all 0.3s ease-in-out;
+}
+.entete__menu-item a:hover {
+  background-size: 100% 0.1em;
+  transform: scale(1.2);
+}
+
+.hero {
+  height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(32, 31, 31, 0.3) 45%, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__image {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+}
+.hero__image img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero__contenu {
+  color: snow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 80px;
+  text-align: center;
+}
+.hero__titre {
+  margin: 0;
+  font-weight: 40;
+}
+.hero__titre strong {
+  color: rgb(251, 98, 42);
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+}
+.hero__description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 450;
+}
+
+.recherche {
+  margin-inline: 1rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.recherche__input {
+  padding: 5px;
+  background-color: snow;
+  outline: none;
+}
+.recherche__bouton {
+  position: absolute;
+  top: -3px;
+  bottom: 0;
+  right: 0;
+  border: none;
+  border-left: 1px solid black;
+}
+.recherche__bouton img {
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}/*# sourceMappingURL=style.css.map */
