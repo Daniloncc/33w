@@ -1,13 +1,33 @@
 .recherche {
-    border: 1px solid red;
-    display: flex;
-    align-items: center;
-    &__input {
-        border: none;
-        outline: none;
-    }
+  margin-inline: 1rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
 
-    &__bouton{
-        border-left:1px solid green($color: #000000) ;
-    }
+  &__input {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  &__bouton {
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    right: 0;
+    border: none;
+
+    border-left: 1px solid black;
+  }
+
+  &__bouton img {
+    height: auto;
+    width: auto;
+    object-fit: contain;
+  }
 }
