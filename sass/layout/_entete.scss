@@ -1,0 +1,29 @@
+.entete {
+  background-color: blanchedalmond;
+  display: flex;
+  &__contenu {
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  &__nav {
+    margin: 0 0 auto 0;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+  }
+
+  &__menu-item {
+    a {
+      display: block;
+      background-color: aqua;
+    }
+  }
+}
