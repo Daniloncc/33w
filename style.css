@@ -69,6 +69,20 @@ body {
   margin: 0 auto;
 }
 
+.chk__menu {
+  display: none;
+}
+
+.chk__menu:checked ~ .entete__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.chk__menu:checked ~ .entete__nav .entete__menu {
+  flex-direction: column;
+}
+
 .entete {
   display: flex;
   color: black;
@@ -84,8 +98,25 @@ body {
 }
 .entete__nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 615px) {
+  .entete__nav {
+    display: none;
+  }
+}
+.entete__burger {
+  display: none;
+}
+@media screen and (max-width: 615px) {
+  .entete__burger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 .entete__menu {
   margin-right: 20px;
