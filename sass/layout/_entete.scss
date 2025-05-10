@@ -2,14 +2,28 @@
   display: none;
 }
 
-.chk__menu:checked ~ .entete__nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .entete__menu {
+.chk__menu:checked {
+  & ~ .entete__nav {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+      to top,
+      rgba(32, 31, 31, 0.8) 75%,
+      transparent
+    );
+    color: antiquewhite;
+    font-size: 25px;
+
+    .entete__menu {
+      flex-direction: column;
+      padding: 0;
+    }
   }
 }
 
@@ -17,31 +31,38 @@
   display: flex;
   color: black;
 
-  // &__contenu {
-  //   flex-grow: 1;
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
-
-  // &__logo {
-  //   width: 75px;
-  //   height: 75px;
-  // }
-
-  // &__nav {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   //justify-content: flex-end;
-  //   justify-content: space-between;
-  //   align-items: center;
-
-  @media screen and (max-width: $point-rupture-797) and (min-width: $point-rupture) {
-    background-color: black;
+  &__contenu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
   }
-  // @media screen and (max-width: $point-rupture) {
-  //   display: none;
-  // }
-  //}
+
+  &__logo {
+    width: 75px;
+    height: 75px;
+
+    @media screen and (max-width: $point-rupture-797) and (min-width: $point-rupture) {
+      margin-top: 10px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $point-rupture-797) and (min-width: $point-rupture) {
+      justify-content: center;
+      form {
+        margin-top: 20px;
+        flex-basis: 300px;
+      }
+    }
+    @media screen and (max-width: $point-rupture) {
+      display: none;
+    }
+  }
 
   &__burger {
     display: none;
@@ -49,8 +70,8 @@
     @media screen and (max-width: $point-rupture) {
       display: block;
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 20px;
+      right: 20px;
     }
   }
 
