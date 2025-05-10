@@ -1,0 +1,15 @@
+.populaire {
+  margin-inline: 45px;
+  margin-bottom: 30px;
+
+  & hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__cartes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

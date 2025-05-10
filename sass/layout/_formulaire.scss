@@ -1,0 +1,31 @@
+.formulaire {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  color: green;
+  font-size: clamp(0.875rem, 0.7159rem + 0.7955vw, 1.3125rem);
+  background-color: rgb(255, 255, 254);
+
+  @media screen and (max-width: $point-rupture-797) and (min-width: $point-rupture) {
+    margin-top: -25px;
+  }
+
+  &__contenu {
+    background-color: rgb(255, 255, 255);
+    margin-inline: 45px;
+    padding: 60px 40px;
+
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  &__input {
+    padding: 5px 7px;
+    margin-left: 5px;
+    border: 0.5 px solid black;
+  }
+}
