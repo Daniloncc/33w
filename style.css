@@ -251,6 +251,20 @@ body {
   border: 0.5 px solid black;
 }
 
+.populaire {
+  margin-inline: 45px;
+  margin-bottom: 30px;
+}
+.populaire hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.populaire__cartes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .recherche {
   margin-inline: 1rem;
   display: flex;
@@ -281,11 +295,18 @@ body {
 }
 
 .carte {
-  max-width: 300px;
+  max-width: 230px;
   max-height: 300px;
+  position: relative;
 }
 .carte img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.carte img:hover {
+  filter: brightness(0.6);
+  transform: scale(1.05);
 }/*# sourceMappingURL=style.css.map */
