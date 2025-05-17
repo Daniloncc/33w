@@ -1,76 +1,106 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php get_header(); ?>
+<section class="hero">
+  <picture class="hero__image">
+    <img src="img/maldives.jpg" alt="Maldives" />
+  </picture>
+  <div class="hero__contenu">
+    <h1 class="hero__titre">
+      La vie est une
+      <a href="#" class="hero__lien"><strong>Voyage</strong></a>
+    </h1>
+    <p class="hero__description">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum delectus
+      tempore explicabo quibusdam provident atque dolores repudiandae nobis
+      modi ducimus!
+    </p>
+    <small>email@gmail.com</small>
+    <small>700 n'importe ou, Montreal</small>
+    <small>(123)456-6789</small>
+  </div>
+</section>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- link google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Actor&family=Allura&family=Amatic+SC:wght@400;700&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Belleza&family=Cinzel:wght@400..900&family=Kings&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Giga:wght@100..900&family=Lexend+Mega:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <!-- <link rel="stylesheet" href="normalize.css"> -->
-  <link rel="stylesheet" href="style.css" />
-  <script src="script/checkbox.js" defer></script>
-  <title>Page Accueil</title>
-</head>
-
-<body>
-  <header class="entete">
-    <div class="entete__contenu">
-      <img class="entete__logo" src="img/logo.png" alt="logo" />
-      <label for="chk__menu" class="entete__burger">
-        <img
-          src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000"
-          width="32"
-          height="32" />
-      </label>
-      <input type="checkbox" class="chk__menu" id="chk__menu" />
-      <nav class="entete__nav">
-        <form action="" class="recherche">
-          <input
-            class="recherche__input"
-            type="search"
-            name="recherche"
-            id="recherche" />
-          <button class="recherche__bouton">
-            <img
-              src="https://s2.svgbox.net/materialui.svg?ic=search&color=000"
-              width="26"
-              height="26" />
-          </button>
-        </form>
-        <ul class="entete__menu">
-          <li class="entete__menu-item"><a href="#">Aventure</a></li>
-          <li class="entete__menu-item"><a href="#">Relaxer</a></li>
-          <li class="entete__menu-item"><a href="#">Culturel</a></li>
-          <li class="entete__menu-item"><a href="#">Zen</a></li>
-          <li class="entete__menu-item"><a href="#">Nature</a></li>
-          <li class="entete__menu-item"><a href="#">Sport</a></li>
-          <li class="entete__menu-item"><a href="#">Croisiere</a></li>
-        </ul>
-      </nav>
+<section class="formulaire">
+  <form action="" class="formulaire__contenu">
+    <div>
+      <label for="nom">Nom</label>
+      <input
+        class="formulaire__input"
+        type="text"
+        name="nom"
+        id="nom"
+        placeholder="Ecrivez votre nom" />
     </div>
-  </header>
-
-  <section class="hero">
-    <picture class="hero__image">
-      <img src="img/maldives.jpg" alt="Maldives" />
-    </picture>
-    <div class="hero__contenu">
-      <h1 class="hero__titre">La vie est une <strong>Voyage</strong></h1>
-      <p class="hero__description">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum delectus
-        tempore explicabo quibusdam provident atque dolores repudiandae nobis
-        modi ducimus!
-      </p>
+    <div>
+      <label for="prenom">Prenom</label>
+      <input
+        class="formulaire__input"
+        type="text"
+        name="prenom"
+        id="prenom"
+        placeholder="Ecrivez votre Prenom" />
     </div>
-  </section>
-  <section class="galerie">asdasdasd</section>
-  <section class="populaire">dasdasdasdasdasdasdasdasdasd</section>
+    <div>
+      <label for="telephone">Telephone</label>
+      <input
+        class="formulaire__input"
+        type="text"
+        name="telephone"
+        id="telephone"
+        placeholder="Ecrivez votre telephone" />
+    </div>
+    <div>
+      <label for="nom">Courriel</label>
+      <input
+        class="formulaire__input"
+        type="text"
+        name="curiel"
+        id="courriel"
+        placeholder="Ecrivez votre courriel" />
+    </div>
+    <button type="submit" class="hero__lien">S'inscrire</button>
+  </form>
+</section>
 
-  <footer class="pied-page"></footer>
-</body>
+<section class="populaire">
 
-</html>
+  <?php if (have_posts()) {
+    // extraire chaque post
+    while (have_posts()) {
+      the_post(); ?>
+      <h2><?php the_title(); ?></h2>
+  <?php the_content();
+    }
+  } ?>
+  <h2>Les Destinations favorites</h2>
+  <hr />
+  <div class="populaire__cartes">
+    <article class="carte">
+      <img src="img/aventure.jpg" alt="jeep dans le desert" />
+    </article>
+    <article class="carte">
+      <img src="img/nature.jpg" alt="foret" />
+    </article>
+    <article class="carte">
+      <img src="img/plage_1.jpg" alt="plage" />
+    </article>
+    <article class="carte">
+      <img src="img/veneza.jpg" alt="Veneza" />
+    </article>
+    <article class="carte"><img src="img/zen.jpg" alt="jardin" /></article>
+    <article class="carte"><img src="img/paris.jpg" alt="paris" /></article>
+    <article class="carte">
+      <img src="img/croisiere.jpg" alt="croisiere" />
+    </article>
+    <article class="carte">
+      <img src="img/chalet.jpg" alt="chalet" />
+    </article>
+    <article class="carte">
+      <img src="img/montagnes.jpg" alt="montagnes" />
+    </article>
+    <article class="carte">
+      <img src="img/aurora_boreel.jpg" alt="aurora boreel" />
+    </article>
+  </div>
+</section>
+
+<?php get_footer(); ?>

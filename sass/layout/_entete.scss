@@ -29,7 +29,6 @@
 
 .entete {
   display: flex;
-  color: black;
 
   &__contenu {
     flex-grow: 1;
@@ -40,6 +39,15 @@
   &__logo {
     width: 75px;
     height: 75px;
+    position: relative;
+    margin-left: 15px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
 
     @media screen and (max-width: $point-rupture-797) and (min-width: $point-rupture) {
       margin-top: 10px;
@@ -78,7 +86,6 @@
   &__menu {
     margin-right: 20px;
     display: flex;
-
     gap: 1rem;
     list-style-type: none;
   }
