@@ -52,6 +52,12 @@
     @media screen and (max-width: $point-rupture-797) and (min-width: $point-rupture) {
       margin-top: 10px;
     }
+
+    &--pied-page {
+      width: 150px;
+      height: 150px;
+      padding: 45px;
+    }
   }
 
   &__nav {
