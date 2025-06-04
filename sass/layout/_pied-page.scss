@@ -1,0 +1,110 @@
+.pied-page {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(32, 31, 31, 0.3) 50%,
+    transparent
+  );
+  display: flex;
+
+  &__contenu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 35px;
+  }
+
+  &__menu {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: none;
+  }
+
+  &__menu-item {
+    a {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      cursor: pointer;
+      color: inherit;
+      display: inline-block;
+      text-decoration: none;
+      background-image: linear-gradient(
+        to right,
+        rgb(251, 98, 42) 0%,
+        rgb(251, 98, 42) 100%
+      );
+      background-repeat: no-repeat;
+      background-size: 0% 0.1em;
+      background-position: 0 100%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    a:hover {
+      background-size: 100% 0.1em;
+      transform: scale(1.2);
+    }
+  }
+
+  &__contacte {
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
+    padding: 0 35px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background-color: black;
+    }
+  }
+
+  &__titre {
+    font-size: clamp(1.375rem, 1.1318rem + 1.2162vw, 2.5rem);
+
+    & ~ p {
+      font-size: 20px;
+      color: rgb(223, 63, 4);
+      margin-top: 10px;
+
+      & > strong {
+        font-size: 16px;
+        color: black;
+      }
+    }
+  }
+
+  &__reseaux {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+
+    &--icon {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease-in-out;
+      fill: black;
+
+      &:hover {
+        transform: scale(1.1);
+        fill: rgb(223, 63, 4);
+      }
+    }
+  }
+}
