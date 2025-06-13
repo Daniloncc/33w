@@ -96,7 +96,8 @@
     list-style-type: none;
   }
 
-  &__menu-item {
+  &__menu-item,
+  &__menu .menu_item {
     a {
       font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;

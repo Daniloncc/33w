@@ -1,6 +1,6 @@
 <!-- Represente le modele par default -->
 <?php get_header(); ?>
-<h1> pour debogade - a retirer ---------- index.php -----------</h1>
+<!-- <h1> pour debogade - a retirer ---------- category.php -----------</h1> -->
 <!-- <section class="hero">
   <picture class="hero__image">
     <img src="wp-content/uploads/2025/06/maldives.1.jpg" alt="Maldives" />

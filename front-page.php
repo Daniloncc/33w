@@ -1,7 +1,7 @@
-<!-- Represente le modele par default -->
+<!-- le modele front-page permet d'afficher la page d'accueil -->
 <?php get_header(); ?>
-<h1> pour debogade - a retirer ---------- index.php -----------</h1>
-<!-- <section class="hero">
+<!-- <h1> pour debogade - a retirer ---------- Front-page.php -----------</h1> -->
+<section class="hero">
   <picture class="hero__image">
     <img src="wp-content/uploads/2025/06/maldives.1.jpg" alt="Maldives" />
   </picture>
@@ -19,9 +19,9 @@
     <small>700 n'importe ou, Montreal</small>
     <small>(123)456-6789</small>
   </div>
-</section> -->
+</section>
 
-<!-- <section class="formulaire">
+<section class="formulaire">
   <form action="" class="formulaire__contenu">
     <div>
       <label for="nom">Nom</label>
@@ -61,25 +61,27 @@
     </div>
     <button type="submit" class="hero__lien">S'inscrire</button>
   </form>
-</section> -->
+</section>
 
 <section class="populaire">
+  <div class="populaire__cartes">
+    <?php if (have_posts()) {
+      // extraire chaque post
+      while (have_posts()) {
+        the_post();
+    ?>
+        <?php
+        if (in_category('galerie')) {
+          get_template_part("gabarit/galerie");
+        } else {
+          get_template_part("gabarit/carte");
+        ?>
 
-  <?php if (have_posts()) {
-    // extraire chaque post
-    while (have_posts()) {
-      // affichage de l
-      // image mise en avant miniature
+    <?php }
+      }
+    } ?>
+  </div>
 
-      the_post();
-      the_post_thumbnail('thumbnail');
-  ?>
-      <!-- affichage du titre -->
-      <h2><?php the_title(); ?></h2>
-      <!-- la fonction qui sert a afficher les images dans le content qu[on met en bas :articles/modifier/+-->
-  <?php the_content();
-    }
-  } ?>
 
   <h2>Les Destinations favorites</h2>
   <hr />
