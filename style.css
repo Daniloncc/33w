@@ -134,7 +134,6 @@ body {
   }
   .entete__nav form {
     margin-top: 20px;
-    flex-basis: 300px;
   }
 }
 @media screen and (max-width: 615px) {
@@ -378,6 +377,7 @@ body {
   overflow: hidden;
 }
 .recherche__input {
+  flex-grow: 1;
   padding: 5px;
   outline: none;
   width: 100%;

@@ -9,6 +9,7 @@
   overflow: hidden;
 
   &__input {
+    flex-grow: 1;
     padding: 5px;
     outline: none;
     width: 100%;

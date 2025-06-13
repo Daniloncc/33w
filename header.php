@@ -32,7 +32,8 @@
       </label>
       <input type="checkbox" class="chk__menu" id="chk__menu" />
       <nav class="entete__nav">
-        <form action="" class="recherche">
+        <?php get_search_form() ?>
+        <!-- <form action="" class="recherche">
           <input
             class="recherche__input"
             type="search"
@@ -44,7 +45,7 @@
               width="26"
               height="26" />
           </button>
-        </form>
+        </form> -->
         <!-- <ul class="entete__menu">
           <li class="entete__menu-item"><a href="#">Aventure</a></li>
           <li class="entete__menu-item"><a href="#">Relaxer</a></li>
@@ -57,7 +58,7 @@
         <?php wp_nav_menu(array(
           "menu" => "principal",
           'container'            => 'ul',
-          'container_class'      => '1111',
+          'container_class'      => '',
           'menu_class'           => 'entete__menu',
         )) ?>
       </nav>
