@@ -64,7 +64,7 @@
 </section>
 
 <section class="populaire">
-  <div class="populaire__cartes">
+  <div class="populaire__destinations">
     <?php if (have_posts()) {
       // extraire chaque post
       while (have_posts()) {

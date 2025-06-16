@@ -279,7 +279,12 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
-
+.populaire .conteneur__carte {
+  margin-top: 25px;
+  padding: 15px 20px;
+  border: 1px solid black;
+  display: flex;
+}
 .pied-page {
   width: 100%;
   height: 100%;

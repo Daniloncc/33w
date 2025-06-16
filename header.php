@@ -12,9 +12,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Actor&family=Allura&family=Amatic+SC:wght@400;700&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Belleza&family=Cinzel:wght@400..900&family=Kings&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Giga:wght@100..900&family=Lexend+Mega:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="normalize.css" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Page Accueil</title>
+  <!-- <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="style.css" /> -->
+  <!-- <title>Page Accueil</title> -->
   <?php wp_head(); ?>
 </head>
 

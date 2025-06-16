@@ -4,6 +4,7 @@ function mon_theme_supports()
 {
     //permet d'avior des images, logo etc
     add_theme_support('post-thumbnails');
+    add_image_size("miniature", 75, 75, true);
     add_theme_support('title-tag');
     add_theme_support('menus');
     add_theme_support('custom-logo', array(
@@ -19,7 +20,18 @@ add_action('after_setup_theme', 'mon_theme_supports');
 function theme_tp_enqueue_styles()
 {
     // se manifeste apres que le hook 
-    wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css');
+    wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css');
+    $css_path = get_template_directory() . '/style.css';
+    $css_url  = get_template_directory_uri() . '/style.css';
+
+    wp_enqueue_style(
+        'main-style',
+        $css_url,
+        array(),
+        filemtime($css_path),
+        null
+    );
+
     wp_enqueue_style('main-style', get_stylesheet_uri());
 
     //verifier si le menu mobile es coche ou non

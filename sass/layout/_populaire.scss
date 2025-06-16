@@ -12,4 +12,14 @@
     flex-wrap: wrap;
     gap: 20px;
   }
+
+  .conteneur__carte {
+    margin-top: 25px;
+    padding: 15px 20px;
+    border: 1px solid black;
+    display: flex;
+
+    & .conteneur__carte-text {
+    }
+  }
 }
