@@ -284,7 +284,16 @@ body {
   padding: 15px 20px;
   border: 1px solid black;
   display: flex;
+  gap: 25px;
 }
+.populaire .conteneur__carte small {
+  color: rgb(157, 156, 156);
+}
+.populaire .conteneur__temp-haut {
+  color: rgb(183, 4, 4);
+  font-weight: 500;
+}
+
 .pied-page {
   width: 100%;
   height: 100%;

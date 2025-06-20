@@ -18,8 +18,21 @@
     padding: 15px 20px;
     border: 1px solid black;
     display: flex;
+    gap: 25px;
+
+    & h2 {
+    }
+
+    & small {
+      color: rgb(157, 156, 156);
+    }
 
     & .conteneur__carte-text {
     }
+  }
+
+  .conteneur__temp-haut {
+    color: rgb(183, 4, 4);
+    font-weight: 500;
   }
 }
