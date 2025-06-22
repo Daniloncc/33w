@@ -293,6 +293,7 @@ body {
   display: flex;
   gap: 15px;
   font-weight: 500;
+  margin-bottom: 25px;
 }
 .populaire .conteneur__temp-haut {
   color: rgb(183, 4, 4);
@@ -302,6 +303,16 @@ body {
 }
 .populaire .conteneur__temp-moy {
   color: rgb(49, 49, 49);
+}
+.populaire .conteneur__category--lien {
+  text-decoration: none;
+  color: rgb(165, 44, 0);
+  transition: all 0.3s ease-in-out;
+}
+.populaire .conteneur__category--lien:hover {
+  font-size: 16.5px;
+  color: rgb(255, 67, 4);
+  text-decoration: underline;
 }
 
 .pied-page {

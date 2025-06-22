@@ -1,5 +1,5 @@
 <?php
-$lien = " <a href=" . get_permalink() . ">Suite</a>";
+$lien = "<br> <a class='conteneur__category--lien' href=" . get_permalink() . ">Suite</a>";
 // template carte 
 ?>
 <article class="conteneur__carte">
@@ -13,7 +13,23 @@ $lien = " <a href=" . get_permalink() . ">Suite</a>";
             <small>Temp Min: <i class="conteneur__temp-min"><?php the_field('temperature_min'); ?>&deg;C</i></small>
         </div>
         <div class="conteneur__category">
-            <?php the_category(); ?>
+            <?php
+            $categories = get_the_category();
+            $exclude_name = 'Destination';
+            $separator = ', ';
+            $output = '';
+
+            if (! empty($categories)) {
+                foreach ($categories as $category) {
+                    if ($category->name !== $exclude_name) {
+                        $output .= '<a class="conteneur__category--lien" href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>' . $separator;
+                    }
+                }
+                // Retire le dernier séparateur
+                echo trim($output, $separator);
+            }
+
+            ?>
         </div>
     </div>
 </article>
