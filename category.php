@@ -1,25 +1,7 @@
 <!-- Represente le modele par default -->
 <?php get_header(); ?>
 <!-- <h1> pour debogade - a retirer ---------- category.php -----------</h1> -->
-<!-- <section class="hero">
-  <picture class="hero__image">
-    <img src="wp-content/uploads/2025/06/maldives.1.jpg" alt="Maldives" />
-  </picture>
-  <div class="hero__contenu">
-    <h1 class="hero__titre">
-      La vie est une
-      <a href="#" class="hero__lien"><strong>Voyage</strong></a>
-    </h1>
-    <p class="hero__description">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum delectus
-      tempore explicabo quibusdam provident atque dolores repudiandae nobis
-      modi ducimus!
-    </p>
-    <small>email@gmail.com</small>
-    <small>700 n'importe ou, Montreal</small>
-    <small>(123)456-6789</small>
-  </div>
-</section> -->
+
 
 <!-- <section class="formulaire">
   <form action="" class="formulaire__contenu">
@@ -64,7 +46,8 @@
 </section> -->
 
 <section class="populaire">
-
+  <h2><?php single_cat_title(); ?></h2>
+  <?php echo category_description(); ?>
   <?php if (have_posts()) {
     // extraire chaque post
     while (have_posts()) {
@@ -75,7 +58,7 @@
       the_post_thumbnail('thumbnail');
   ?>
       <!-- affichage du titre -->
-      <h2><?php the_title(); ?></h2>
+      <h3><?php the_title(); ?></h3>
       <!-- la fonction qui sert a afficher les images dans le content qu[on met en bas :articles/modifier/+-->
   <?php the_content();
     }

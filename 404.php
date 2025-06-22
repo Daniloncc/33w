@@ -20,7 +20,7 @@
     <small>(123)456-6789</small>
   </div>
 </section> -->
-
+<?php get_template_part('gabarit/hero_error'); ?>
 <!-- <section class="formulaire">
   <form action="" class="formulaire__contenu">
     <div>
@@ -62,11 +62,5 @@
     <button type="submit" class="hero__lien">S'inscrire</button>
   </form>
 </section> -->
-
-<section class="populaire">
-
-  <h1>Erreur 404</h1>
-  <h2>L'adresse n'existe pas</h2>
-</section>
 
 <?php get_footer(); ?>

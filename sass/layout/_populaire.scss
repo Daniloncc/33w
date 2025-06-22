@@ -31,8 +31,20 @@
     }
   }
 
+  .conteneur__temp {
+    display: flex;
+    gap: 15px;
+    font-weight: 500;
+  }
   .conteneur__temp-haut {
     color: rgb(183, 4, 4);
-    font-weight: 500;
+  }
+
+  .conteneur__temp-min {
+    color: rgb(7, 4, 183);
+  }
+
+  .conteneur__temp-moy {
+    color: rgb(49, 49, 49);
   }
 }
