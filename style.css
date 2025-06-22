@@ -269,6 +269,9 @@ body {
 .populaire {
   margin-inline: 45px;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 25px;
 }
 .populaire hr {
   margin-top: 30px;
@@ -278,6 +281,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+.populaire__contenu header {
+  border-bottom: 1px solid black;
 }
 .populaire .conteneur__carte {
   margin-top: 25px;

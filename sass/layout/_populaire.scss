@@ -1,6 +1,9 @@
 .populaire {
   margin-inline: 45px;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 25px;
 
   & hr {
     margin-top: 30px;
@@ -13,6 +16,13 @@
     gap: 20px;
   }
 
+  &__contenu {
+    & header {
+      border-bottom: 1px solid black;
+    }
+  
+  }
+
   .conteneur__carte {
     margin-top: 25px;
     padding: 15px 20px;
@@ -20,15 +30,10 @@
     display: flex;
     gap: 25px;
 
-    & h2 {
-    }
-
     & small {
       color: rgb(157, 156, 156);
     }
 
-    & .conteneur__carte-text {
-    }
   }
 
   .conteneur__temp {
