@@ -72,6 +72,8 @@ body {
 
 .chk__menu {
   display: none;
+  cursor: pointer;
+  margin-top: 75px;
 }
 
 .chk__menu:checked ~ .entete__nav {
@@ -90,6 +92,9 @@ body {
 .chk__menu:checked ~ .entete__nav .entete__menu {
   flex-direction: column;
   padding: 0;
+}
+.chk__menu:checked ~ .entete__nav .recherche {
+  display: none;
 }
 
 .entete {
@@ -148,7 +153,7 @@ body {
   .entete__burger {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 70px;
     right: 20px;
   }
 }
