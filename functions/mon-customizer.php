@@ -7,13 +7,13 @@
         'priority' => 30,
     ));
 
-    $wp_customize->add_setting('hero_title', array(
+    $wp_customize->add_setting('hero_auteur', array(
         'default' => __('Bienvenue sur mon site', 'theme_33w'),
         'sanitize_callback' => 'sanitize_text_field'
     ));
 
-    $wp_customize->add_control('hero_title', array(
-        'label' => __('Hero Title', 'theme_33w'),
+    $wp_customize->add_control('hero_auteur', array(
+        'label' => __('Auteur du theme', 'theme_33w'),
         'section' => 'hero_section',
         'type' => 'text',
     ));
