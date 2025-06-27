@@ -1,0 +1,26 @@
+<!-- Represente le modele par default -->
+<?php get_header(); ?>
+<!-- <h1> pour debogade - a retirer ---------- search.php -----------</h1> -->
+<?php get_template_part('gabarit/hero'); ?>
+
+<section class="populaire">
+
+  <?php if (have_posts()) {
+    // extraire chaque post
+    while (have_posts()) {
+      // affichage de l
+      // image mise en avant miniature
+
+      the_post();
+      the_post_thumbnail('thumbnail');
+  ?>
+      <!-- affichage du titre -->
+      <h2><?php the_title(); ?></h2>
+      <!-- la fonction qui sert a afficher les images dans le content qu[on met en bas :articles/modifier/+-->
+  <?php the_content();
+    }
+  } ?>
+
+</section>
+
+<?php get_footer(); ?>
