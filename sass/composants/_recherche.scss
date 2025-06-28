@@ -13,21 +13,23 @@
     padding: 5px;
     outline: none;
     width: 100%;
+
   }
 
   &__bouton {
     position: absolute;
-    top: -3px;
+    
+     top: -13px;
     bottom: 0;
     right: 0;
     border: none;
 
     border-left: 1px solid black;
+
+    & i {
+      margin-top: 8px;
+      padding: 5px;
+    }
   }
 
-  &__bouton img {
-    height: auto;
-    width: auto;
-    object-fit: contain;
-  }
 }

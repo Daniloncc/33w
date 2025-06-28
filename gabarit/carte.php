@@ -11,6 +11,7 @@ $lien = "<br> <a class='conteneur__category--lien' href=" . get_permalink() . ">
             <small>Temp Max: <i class="conteneur__temp-haut"><?php the_field('temperature_max'); ?>&deg;C</i></small>
             <small>Temp Moyenne: <i class="conteneur__temp-moy"><?php the_field('temperature_moyenne'); ?>&deg;C</i></small>
             <small>Temp Min: <i class="conteneur__temp-min"><?php the_field('temperature_min'); ?>&deg;C</i></small>
+            <small>Evaluation: 0 / 5 <i class="fa-solid fa-arrow-right"></i> <i class="conteneur__evaluation"><?php the_field('evaluation'); ?></i></small>
         </div>
         <div class="conteneur__category">
             <?php

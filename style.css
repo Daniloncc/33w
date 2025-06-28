@@ -315,6 +315,9 @@ body {
 .populaire .conteneur__temp-moy {
   color: rgb(49, 49, 49);
 }
+.populaire .conteneur__evaluation {
+  color: rgb(0, 0, 0);
+}
 .populaire .conteneur__category--lien {
   text-decoration: none;
   color: rgb(165, 44, 0);
@@ -412,6 +415,30 @@ body {
   fill: rgb(223, 63, 4);
 }
 
+.categorie {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+}
+.categorie__cartes {
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+.categorie__carte {
+  margin-top: 25px;
+  padding: 15px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.categorie__carte header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
 .recherche {
   margin-inline: 1rem;
   display: flex;
@@ -430,16 +457,15 @@ body {
 }
 .recherche__bouton {
   position: absolute;
-  top: -3px;
+  top: -13px;
   bottom: 0;
   right: 0;
   border: none;
   border-left: 1px solid black;
 }
-.recherche__bouton img {
-  height: auto;
-  width: auto;
-  object-fit: contain;
+.recherche__bouton i {
+  margin-top: 8px;
+  padding: 5px;
 }
 
 .carte {

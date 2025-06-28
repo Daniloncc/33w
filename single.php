@@ -4,26 +4,46 @@
 
 <section class="populaire">
 
-  <?php if (have_posts()) {
-    // extraire chaque post
-    while (have_posts()) {
-      // affichage de l
-      // image mise en avant miniature
+  <!-- <?php if (have_posts()) {
+          // extraire chaque post
+          while (have_posts()) {
+            // affichage de l
+            // image mise en avant miniature
 
-      the_post();
-      the_post_thumbnail('large');
-  ?>
-      <!-- affichage du titre -->
-      <div class="populaire__contenu">
-        <header>
-          <h2><?php the_title(); ?></h2>
-        </header>
-        <!-- la fonction qui sert a afficher les images dans le content qu'on met en bas :articles/modifier/+-->
-    <?php the_content();
-      edit_post_link();
-    }
-  } ?>
-      </div>
+            the_post();
+            the_post_thumbnail('large');
+        ?> -->
+
+  <!-- affichage du titre -->
+  <div class="populaire__contenu">
+    <header>
+      <h2><?php the_title(); ?></h2>
+      <div class="conteneur__category">
+        <?php
+            $categories = get_the_category();
+            $exclude_name = 'Destination';
+            $separator = ', ';
+            $output = '';
+
+            if (! empty($categories)) {
+              foreach ($categories as $category) {
+                if ($category->name !== $exclude_name) {
+                  $output .= '<a class="conteneur__category--lien" href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>' . $separator;
+                }
+              }
+              // Retire le dernier séparateur
+              echo trim($output, $separator);
+            }
+
+        ?>
+    </header>
+    <!-- la fonction qui sert a afficher les images dans le content qu'on met en bas :articles/modifier/+-->
+<?php the_content();
+            edit_post_link();
+          }
+        } ?>
+  </div>
+
 </section>
 
 <?php get_footer(); ?>
